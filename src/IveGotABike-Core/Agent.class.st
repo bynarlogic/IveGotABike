@@ -80,16 +80,6 @@ Agent >> inspectState [
 	^ state inspect.
 ]
 
-{ #category : 'locking' }
-Agent >> lockBehavior: signal [
-	lockedBehaviors add: signal.
-]
-
-{ #category : 'locking' }
-Agent >> lockedBehaviors [
-	^ lockedBehaviors 
-]
-
 { #category : 'accessing' }
 Agent >> log [
 	^ log
@@ -156,9 +146,4 @@ Agent >> state [
 { #category : 'accessing' }
 Agent >> state: aCollection [ 
 	state := aCollection
-]
-
-{ #category : 'locking' }
-Agent >> unlockBehavior: signal [
-	lockedBehaviors remove: signal.
 ]

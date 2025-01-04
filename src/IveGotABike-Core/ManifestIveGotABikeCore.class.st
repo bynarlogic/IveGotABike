@@ -36,3 +36,10 @@ ManifestIveGotABikeCore class >> ruleStringConcatenationRuleV1FalsePositive [
 	<ignoreForCoverage>
 	^ #(#(#(#RGPackageDefinition #(#'IveGotABike-Core')) #'2024-12-27T21:57:24.93483-05:00') )
 ]
+
+{ #category : 'code-critics' }
+ManifestIveGotABikeCore class >> ruleSuperSendsNewRuleV1FalsePositive [
+
+	<ignoreForCoverage>
+	^ #(#(#(#RGMethodDefinition #(#'SecretsManager class' #instance #true)) #'2025-01-03T07:30:12.264006-05:00') )
+]

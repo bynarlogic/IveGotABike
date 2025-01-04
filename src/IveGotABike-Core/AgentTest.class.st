@@ -39,16 +39,6 @@ AgentTest >> testInitialization [
 ]
 
 { #category : 'tests' }
-AgentTest >> testLockingBehavior [ 
-	| agent logEntry |
-	agent := Agent new.
-	agent lockBehavior: #restricted.
-	agent receive: #restricted with: nil from: nil.
-	logEntry := agent log last value.
-	self assert: (logEntry includesSubstring: 'Locked: a Set(#restricted)').
-]
-
-{ #category : 'tests' }
 AgentTest >> testMessageHandling [ 
 	| agent response |
 	agent := Agent new.
