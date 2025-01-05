@@ -16,12 +16,19 @@ Class {
 		'state',
 		'log',
 		'lockedBehaviors',
-		'delegates'
+		'delegates',
+		'capability'
 	],
 	#category : 'IveGotABike-Core-Base',
 	#package : 'IveGotABike-Core',
 	#tag : 'Base'
 }
+
+{ #category : 'capabilities' }
+Agent >> addCapability: aCapability [
+	capability := aCapability.
+	aCapability registerWithAgent: self.
+]
 
 { #category : 'delegating' }
 Agent >> addDelegate: agent [
@@ -47,7 +54,6 @@ Agent >> clone [
    copy := self class new.
    copy state: state copy.
    copy setLog: log copy.
-   copy lockBehavior: lockedBehaviors copy.
    copy addDelegate: delegates copy.
    ^ copy.
 ]
@@ -55,6 +61,12 @@ Agent >> clone [
 { #category : 'accessing' }
 Agent >> delegates [
 	^ delegates
+]
+
+{ #category : 'capabilities' }
+Agent >> executeCapability: message [
+	capability ifNil: [ ^ 'No capability assigned.' ].
+	^ capability handleMessage: message
 ]
 
 { #category : 'state management' }
@@ -111,9 +123,20 @@ Agent >> receive: signal with: data from: sender [
 	self log: signal with: 'Ignored'.
 ]
 
+{ #category : 'capabilities' }
+Agent >> removeCapability [
+	capability := nil.
+]
+
 { #category : 'delegating' }
 Agent >> removeDelegate: agent [
 	delegates remove: agent
+]
+
+{ #category : 'capabilities' }
+Agent >> replaceCapability: aCapability [
+	self removeCapability.
+	self addCapability: aCapability.
 ]
 
 { #category : 'debugging' }
