@@ -3,7 +3,7 @@ Baseline class for loading traits to Pharo core classes.
 "
 Class {
 	#name : 'BaseLineOfIveGotABike',
-	#superclass : 'Object',
+	#superclass : 'BaselineOf',
 	#category : 'BaslineOfIveGotABike',
 	#package : 'BaslineOfIveGotABike'
 }
