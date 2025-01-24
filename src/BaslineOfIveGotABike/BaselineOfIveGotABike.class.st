@@ -9,7 +9,7 @@ Class {
 }
 
 { #category : 'baselines' }
-IGABBaseline >> baseline: spec [
+BaseLineOfIveGotABike >> baseline: spec [
 	spec
 		for: #common do: [ 
 			spec package: 'IveGotABike-Core-MenuBar';
@@ -19,6 +19,6 @@ IGABBaseline >> baseline: spec [
 ]
 
 { #category : 'doits' }
-IGABBaseline >> postLoad: aPackageLoader [
+BaseLineOfIveGotABike >> postLoad: aPackageLoader [
    (Smalltalk at: #MenubarMorph) compile: 'traits IGABMenuBarTrait'.
 ]
