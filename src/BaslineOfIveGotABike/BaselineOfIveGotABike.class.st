@@ -2,7 +2,7 @@
 Baseline class for loading traits to Pharo core classes. 
 "
 Class {
-	#name : 'IGABBaseline',
+	#name : 'BaseLineOfIveGotABike',
 	#superclass : 'Object',
 	#category : 'BaslineOfIveGotABike',
 	#package : 'BaslineOfIveGotABike'
