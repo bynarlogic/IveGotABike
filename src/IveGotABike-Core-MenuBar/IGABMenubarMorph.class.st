@@ -1,5 +1,6 @@
-Trait {
-	#name : 'IGABMenuBarTrait',
+Class {
+	#name : 'IGABMenubarMorph',
+	#superclass : 'MenubarMorph',
 	#instVars : [
 		'clock'
 	],
@@ -8,7 +9,7 @@ Trait {
 }
 
 { #category : 'adding' }
-IGABMenuBarTrait >> addClock [
+IGABMenubarMorph >> addClock [
 	| spacer |
 
 	spacer := Morph new.
@@ -31,8 +32,8 @@ IGABMenuBarTrait >> addClock [
 	^ self.
 ]
 
-{ #category : 'adding' }
-IGABMenuBarTrait >> open [
+{ #category : 'accessing' }
+IGABMenubarMorph >> open [
 	self menuBarItems
 		do: [ :each |
 			self
@@ -47,5 +48,5 @@ IGABMenuBarTrait >> open [
 	self
 		addClock;
 		adhereToTop;
-		openInWorld
+		openInWorld.
 ]
