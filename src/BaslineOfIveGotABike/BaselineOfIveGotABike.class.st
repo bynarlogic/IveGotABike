@@ -20,5 +20,5 @@ BaseLineOfIveGotABike >> baseline: spec [
 
 { #category : 'doits' }
 BaseLineOfIveGotABike >> postLoad: aPackageLoader [
-   (Smalltalk at: #MenubarMorph) compile: 'traits IGABMenuBarTrait'.
+   IGABMenubarMorph initialize.
 ]
