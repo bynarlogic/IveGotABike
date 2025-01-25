@@ -2,14 +2,14 @@
 Baseline class for loading traits to Pharo core classes. 
 "
 Class {
-	#name : 'BaseLineOfIveGotABike',
+	#name : 'BaselineOfIveGotABike',
 	#superclass : 'BaselineOf',
 	#category : 'BaselineOfIveGotABike',
 	#package : 'BaselineOfIveGotABike'
 }
 
 { #category : 'baselines' }
-BaseLineOfIveGotABike >> baseline: spec [
+BaselineOfIveGotABike >> baseline: spec [
 	spec
 		for: #common do: [ 
 			spec package: 'IveGotABike-Core-MenuBar';
@@ -19,6 +19,6 @@ BaseLineOfIveGotABike >> baseline: spec [
 ]
 
 { #category : 'doits' }
-BaseLineOfIveGotABike >> postLoad: aPackageLoader [
+BaselineOfIveGotABike >> postLoad: aPackageLoader [
    IGABMenubarMorph initialize.
 ]
