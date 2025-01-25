@@ -16,5 +16,5 @@ BaselineOfIveGotABike >> baseline: spec [
 			spec package: 'IveGotABike-Core-MenuBar';
 			package: 'IveGotABike-Core';
 			package: 'IveGotABike-Core-Tests'].
-		spec postLoadDoIt: [ :loader | IGABMenubarMorph initialize ].
+		spec postLoadDoIt: [ IGABMenubarMorph initialize ].
 ]
