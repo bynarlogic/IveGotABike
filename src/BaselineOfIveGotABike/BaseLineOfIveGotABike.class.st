@@ -10,6 +10,7 @@ Class {
 
 { #category : 'baselines' }
 BaselineOfIveGotABike >> baseline: spec [
+	<baseline>
 	spec
 		for: #common do: [ 
 			spec package: 'IveGotABike-Core-MenuBar';
