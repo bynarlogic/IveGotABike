@@ -16,10 +16,5 @@ BaselineOfIveGotABike >> baseline: spec [
 			spec package: 'IveGotABike-Core-MenuBar';
 			package: 'IveGotABike-Core';
 			package: 'IveGotABike-Core-Tests'].
-		spec postLoad: #postLoadScript.
-]
-
-{ #category : 'doits' }
-BaselineOfIveGotABike >> postLoadScript [
-   IGABMenubarMorph initialize.
+		spec postLoadDoIt: [ :loader | IGABMenubarMorph initialize ].
 ]
