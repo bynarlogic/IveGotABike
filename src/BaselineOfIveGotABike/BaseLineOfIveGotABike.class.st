@@ -4,8 +4,8 @@ Baseline class for loading traits to Pharo core classes.
 Class {
 	#name : 'BaseLineOfIveGotABike',
 	#superclass : 'BaselineOf',
-	#category : 'BaslineOfIveGotABike',
-	#package : 'BaslineOfIveGotABike'
+	#category : 'BaselineOfIveGotABike',
+	#package : 'BaselineOfIveGotABike'
 }
 
 { #category : 'baselines' }
